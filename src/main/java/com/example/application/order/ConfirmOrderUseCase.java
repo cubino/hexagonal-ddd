@@ -1,16 +1,14 @@
 package com.example.application.order;
 
 import com.example.domain.order.Order;
-import com.example.domain.order.OrderRepository;
+import com.example.domain.ports.OrderRepository;
 import lombok.RequiredArgsConstructor;
-
-import java.util.UUID;
 
 @RequiredArgsConstructor
 public class ConfirmOrderUseCase {
     private final OrderRepository orderRepository;
 
-    public Order execute(UUID orderId) {
+    public Order execute(String orderId) {
         Order order = orderRepository.findById(orderId)
             .orElseThrow(() -> new IllegalArgumentException("Order not found: " + orderId));
         

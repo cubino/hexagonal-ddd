@@ -9,8 +9,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.UUID;
-
 @RestController
 @RequestMapping("/api/orders")
 @RequiredArgsConstructor
@@ -29,7 +27,7 @@ public class OrderController {
     }
 
     @PostMapping("/{orderId}/confirm")
-    public ResponseEntity<OrderResponse> confirmOrder(@PathVariable UUID orderId) {
+    public ResponseEntity<OrderResponse> confirmOrder(@PathVariable String orderId) {
         Order order = confirmOrderUseCase.execute(orderId);
         return ResponseEntity.ok(OrderResponse.fromDomain(order));
     }

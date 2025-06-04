@@ -5,11 +5,10 @@ import com.example.domain.order.OrderStatus;
 import lombok.Data;
 
 import java.math.BigDecimal;
-import java.util.UUID;
 
 @Data
 public class OrderResponse {
-    private UUID id;
+    private String id;
     private String customerId;
     private OrderStatus status;
     private BigDecimal amount;
