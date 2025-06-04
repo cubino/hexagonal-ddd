@@ -1,4 +1,4 @@
-package com.example.infrastructure.ports;
+package com.example.domain.ports;
 
 import com.example.domain.order.Order;
 import java.util.List;

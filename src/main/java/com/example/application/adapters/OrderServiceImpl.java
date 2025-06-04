@@ -1,18 +1,18 @@
 package com.example.application.adapters;
 
-import com.example.application.ports.OrderUseCase;
+import com.example.domain.ports.OrderService;
 import com.example.domain.order.Order;
 import com.example.domain.order.Money;
 import com.example.domain.order.OrderDomainService;
-import com.example.infrastructure.ports.OrderRepository;
+import com.example.domain.ports.OrderRepository;
 import org.springframework.stereotype.Service;
 
 @Service
-public class OrderService implements OrderUseCase {
+public class OrderServiceImpl implements OrderService {
     private final OrderDomainService orderDomainService;
     private final OrderRepository orderRepository;
 
-    public OrderService(OrderDomainService orderDomainService, OrderRepository orderRepository) {
+    public OrderServiceImpl(OrderDomainService orderDomainService, OrderRepository orderRepository) {
         this.orderDomainService = orderDomainService;
         this.orderRepository = orderRepository;
     }
