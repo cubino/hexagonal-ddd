@@ -1,7 +1,7 @@
-package com.example.infrastructure;
+package com.example.infrastructure.adapters;
 
 import com.example.domain.order.Order;
-import com.example.domain.order.OrderRepository;
+import com.example.domain.ports.OrderRepository;
 import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Optional;

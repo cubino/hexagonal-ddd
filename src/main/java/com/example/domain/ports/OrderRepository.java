@@ -1,5 +1,6 @@
-package com.example.domain.order;
+package com.example.domain.ports;
 
+import com.example.domain.order.Order;
 import java.util.List;
 import java.util.Optional;
 
