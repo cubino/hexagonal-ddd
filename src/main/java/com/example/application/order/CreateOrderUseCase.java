@@ -2,7 +2,7 @@ package com.example.application.order;
 
 import com.example.domain.order.Money;
 import com.example.domain.order.Order;
-import com.example.domain.ports.OrderRepository;
+import com.example.domain.order.OrderRepository;
 import lombok.RequiredArgsConstructor;
 
 import java.math.BigDecimal;
